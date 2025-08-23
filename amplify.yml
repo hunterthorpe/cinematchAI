@@ -3,6 +3,9 @@ backend:
   phases:
     build:
       commands:
+        - '# Use Node.js 20 for Lambda builds'
+        - nvm install 20
+        - nvm use 20
         - '# Execute Amplify CLI with the helper script'
         - amplifyPush --simple
 frontend:
