@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cinematchai-dev-22060-authRole",
+      "UnauthRoleArn": "arn:aws:iam::987747149408:role/amplify-cinematchai-dev-22060-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::987747149408:role/amplify-cinematchai-dev-22060-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-cinematchai-dev-22060-deployment",
+      "UnauthRoleName": "amplify-cinematchai-dev-22060-unauthRole",
+      "StackName": "amplify-cinematchai-dev-22060",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:987747149408:stack/amplify-cinematchai-dev-22060/6bbda4b0-7fc9-11f0-8f9c-0268ffb69d33",
+      "AmplifyAppId": "d1bqbdmo12wy4q"
+    },
+    "categories": {
+      "function": {
+        "movieapifunction": {}
+      }
+    }
+  }
+}
