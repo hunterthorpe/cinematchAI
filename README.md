@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Cinematch AI
 
-# Run and deploy your AI Studio app
+An intelligent movie recommendation engine that suggests the perfect film for a group to watch. Built with a modern serverless architecture on AWS, Cinematch AI leverages the power of Google's Gemini API to understand collective taste and provide unique, high-quality suggestions.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/temp/1
+## Technology Stack & Architecture
 
-## Run Locally
+This project was built using a modern, scalable, and secure full-stack architecture, emphasizing professional development practices.
 
-**Prerequisites:**  Node.js
+### Frontend
+-   **Framework:** **React**
+-   **Language:** **TypeScript**
+-   **Build Tool:** **Vite**
+-   **Styling:** **Tailwind CSS**
 
+### Backend (Serverless)
+-   **Runtime:** **Node.js** with **Express.js**
+-   **AI Engine:** **Google Gemini API** (`gemini-2.5-flash`)
+-   **Movie Data:** **The Movie Database (TMDb) API**
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### Cloud & Deployment
+-   **Platform:** **AWS Amplify**
+-   **Hosting:** CI/CD pipeline from GitHub for automatic builds and deployments.
+-   **Backend Infrastructure:**
+    -   **AWS Lambda** for running the serverless Express API.
+    -   **Amazon API Gateway** to create and manage the REST endpoint.
+
+---
