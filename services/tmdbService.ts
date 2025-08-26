@@ -1,11 +1,12 @@
 import { TMDBSearchResult } from '../types';
+import { API_BASE_URL } from '../App';
 
 export const searchMovies = async (query: string): Promise<TMDBSearchResult[]> => {
   if (query.trim().length < 2) {
     return [];
   }
   try {
-    const response = await fetch(`/api/search?query=${encodeURIComponent(query)}`);
+    const response = await fetch(`${API_BASE_URL}/search?query=${encodeURIComponent(query)}`);
     if (!response.ok) {
       throw new Error('Failed to fetch from backend search');
     }
@@ -16,9 +17,13 @@ export const searchMovies = async (query: string): Promise<TMDBSearchResult[]> =
   }
 };
 
-export const fetchMovieDetails = async (title: string, year: number, includePoster: boolean): Promise<{ overview: string; posterUrl: string | null; } | null> => {
+export const fetchMovieDetails = async (
+  title: string,
+  year: number,
+  includePoster: boolean
+): Promise<{ overview: string; posterUrl: string | null; } | null> => {
   try {
-    const response = await fetch(`/api/details`, {
+    const response = await fetch(`${API_BASE_URL}/details`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

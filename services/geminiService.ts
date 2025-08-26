@@ -1,3 +1,5 @@
+import { API_BASE_URL } from '../App';
+
 interface SimpleMovieSuggestion {
   title: string;
   year: number;
@@ -5,7 +7,7 @@ interface SimpleMovieSuggestion {
 
 export const suggestMovie = async (movies: string[], exclude: string[] = []): Promise<SimpleMovieSuggestion[]> => {
   try {
-    const response = await fetch('/api/suggest', {
+    const response = await fetch(`${API_BASE_URL}/suggest`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -18,8 +20,7 @@ export const suggestMovie = async (movies: string[], exclude: string[] = []): Pr
       throw new Error(errorData.message || 'Failed to get suggestions from the backend.');
     }
 
-    const suggestions = await response.json();
-    return suggestions as SimpleMovieSuggestion[];
+    return await response.json() as SimpleMovieSuggestion[];
 
   } catch (error) {
     console.error("Error calling backend for suggestions:", error);

@@ -9,6 +9,8 @@ interface MovieInput {
   year: string | null;
 }
 
+export const API_BASE_URL = "https://2yfxzgh101.execute-api.ap-southeast-2.amazonaws.com/"; 
+
 const App: React.FC = () => {
   const [numVoters, setNumVoters] = useState<number>(2);
   const [movieInputs, setMovieInputs] = useState<MovieInput[]>(Array(2).fill({ title: '', year: null }));
